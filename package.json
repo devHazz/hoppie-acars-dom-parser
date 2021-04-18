@@ -1,0 +1,27 @@
+{
+  "name": "hoppie-acars-dom-parser",
+  "version": "1.0.0",
+  "description": "A Package used for easily translating Hoppie DOM Flight Data into TS Functions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:hoppie-parser",
+    "start:hoppie-parser": "npx ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.10.1",
+    "ts-node": "^9.0.0",
+    "tslint": "^5.12.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.6",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "ping": "^0.3.0",
+    "table": "^6.0.3"
+  }
+}
