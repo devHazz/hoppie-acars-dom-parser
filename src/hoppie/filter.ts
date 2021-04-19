@@ -27,9 +27,25 @@ if(filter.length > 0 && acarsdata)
         }
         break;
 
-        case "cpdlc": {
-
+        case "cpdlc": 
+        {
+            for(const row of acarsdata)
+            {
+                if(row["type"] === "progress" || row["type"] === "ads-c" || row["type"] === "datareq" || row["type"] === "telex" || row["type"] === "inforeq")
+                {
+                    continue;
+                }
+                acarsSumUp.push({
+                    msgNo: row["msgNo"],
+                    from: row["from"],
+                    to: row["to"],
+                    type: row["type"],
+                    received: row["received"],
+                    relayed: row["relayed"]
+                })
+            }
         }
+        break;
 
 
     }
@@ -37,7 +53,7 @@ if(filter.length > 0 && acarsdata)
 }
 else
 {
-
+    throw new Error("Correct data not passed correctly to the client");
 }
 
 }
